@@ -22,17 +22,6 @@ def playGame():
         
 
 def askUserChoice():
-	valid = [1,2,3,4]
-	userInput = ''
-
-	while userInput not in valid:
-		print('Please pick a number within 1-4.')
-		userInput = int(input())
-		if userInput not in valid:
-			print('Nope! Your input must be within 1 through 4. Enter again!')
-			continue
-		else:
-			return int(userInput)
     # TODO: write code in this functiont that:
     # 1. Asks the user to enter their input (between 1 and 4)
     # 2. Checks that the user's input is valid. If it's not valid (if it's not between 1 and 4), then ask the user to re-enter their input.
@@ -40,14 +29,7 @@ def askUserChoice():
 
 
 def subtractSticks( number ):
-	global sticks
-	int(number)
-	sticks = sticks - number
-
-	if sticks <=0:
-		return True
-	else:
-		return False
+    global sticks 
     
     # TODO: write code inside this function that:
     # 1. subtracts the parameter `number` from the global variable `sticks`
@@ -55,6 +37,4 @@ def subtractSticks( number ):
     # 3. if there are still sticks left, return False
     
 def determineComputerChoice():
-	ComputerChoice = random.randint(1,4)
-	return ComputerChoice
     # TODO: write code inside this function that returns an integer between 1 and 4, random chosen by the computer
